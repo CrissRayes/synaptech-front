@@ -1,0 +1,92 @@
+// ***** Colors ***** //
+$color-green: #14cf93;
+$color-grey-light: #f2f2f2;
+$color-grey-dark: #222222;
+
+// ***** Logo ***** //
+$logo-height: 2.5rem;
+
+// ***** Breakpoints ***** //
+$breakpoints: (
+  // 16px * 30 = 480px
+  // 16px * 45 = 720px
+  // 16px * 65 = 1040px
+  // 16px * 80 = 1280px
+  xs: 0,
+  sm: 30em,
+  md: 45em,
+  lg: 65em,
+  xl: 80em
+);
+
+// ***** Font Sizes ***** //
+$font-size-root: 62.5%;
+$font-size-xs: 1.2rem;
+$font-size-sm: 1.4rem;
+$font-size-md: 1.6rem;
+$font-size-lg: 1.8rem;
+$font-size-xl: 2rem;
+$font-size-xxl: 2.2rem;
+$font-size-xxxl: 2.4rem;
+$font-size-xxxxl: 2.6rem;
+
+// ***** Font Weights ***** //
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+$font-weight-black: 700;
+
+// ***** Spacing ***** //
+$spacing-xxs: 0.4rem;
+$spacing-xs: 0.8rem;
+$spacing-sm: 1.6rem;
+$spacing-md: 2.4rem;
+$spacing-lg: 3.2rem;
+$spacing-xl: 4rem;
+$spacing-xxl: 4.8rem;
+
+// ***** Border Radius ***** //
+$border-radius: 0.5rem;
+
+// ***** Z-Index ***** //
+$z-index: (
+  modal: 1000,
+  overlay: 900,
+  header: 800,
+  dropdown: 700,
+  default: 1,
+  below: -1,
+);
+
+// ***** Transitions ***** //
+$transition: all 0.2s ease-in-out;
+
+// ***** Widths ***** //
+$width: (
+  container: 120rem,
+  container-sm: 80rem,
+  container-md: 100rem,
+  container-lg: 120rem,
+  container-xl: 140rem,
+);
+
+// ***** Heights ***** //
+$height: (
+  header: 8rem,
+  footer: 6rem,
+);
+
+// ***** Shadows ***** //
+$shadow: (
+  default: 0 0.5rem 1rem rgba(0, 0, 0, 0.2),
+  hover: 0 1rem 2rem rgba(0, 0, 0, 0.2),
+);
+
+// ***** Opacity ***** //
+$opacity: (
+  default: 0.8,
+  hover: 1,
+);

@@ -1,0 +1,31 @@
+@use 'variables' as *;
+
+.container {
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+  width: map-get($width, 'container');
+}
+
+.container-sm {
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+  width: map-get($width, 'container-sm');
+}
+
+.container-md {
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+  width: map-get($width, 'container-md');
+}
+
+.container-lg {
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+  width: map-get($width, 'container-lg');
+}
+
+.container-xl {
+  margin: 0 auto;
+  padding: 0 $spacing-sm;
+  width: map-get($width, 'container-xl');
+}

@@ -22,12 +22,12 @@ export const Home = () => {
 
   return (
     <>
-      <header className={isScrolled ? 'scrolled' : ''}>
-        <img
-          alt='logo'
-          src='/img/Logoipsum.svg'
-        />
-        <nav className='container'>
+      <nav className={isScrolled ? 'scrolled' : ''}>
+        <div className='container menu-desktop'>
+          <img
+            alt='logo'
+            src='/img/Logoipsum.svg'
+          />
           <ul>
             <li>
               <NavLink
@@ -62,14 +62,34 @@ export const Home = () => {
               </NavLink>
             </li>
           </ul>
-          <button
-            onClick={handleMenuOpen}
-            className='menu-btn'
-          >
-            {isMenuOpen ? <FaRegTimesCircle /> : <FaBars />}
-          </button>
-        </nav>
-      </header>
+        </div>
+        {/* Menu Mobile */}
+
+        <button
+          onClick={handleMenuOpen}
+          className='menu-btn'
+        >
+          <FaBars />
+        </button>
+        <div
+          className={`menu-mobile
+          ${isMenuOpen ? 'open' : ''}
+        `}
+        >
+          <div>
+            <button onClick={handleMenuOpen}>
+              <FaRegTimesCircle />
+            </button>
+          </div>
+          {/* Opciones del Menú */}
+          <ul>
+            <li>Opcion 1</li>
+            <li>Opcion 2</li>
+            <li>Opcion 3</li>
+            <li>Opcion 4</li>
+          </ul>
+        </div>
+      </nav>
       <section className='hero'>
         <div className='container'>
           <h1>Home</h1>

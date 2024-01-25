@@ -5,8 +5,10 @@ import { useEffect, useState } from 'react';
 export const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuOpen = () => setIsMenuOpen(!isMenuOpen);
-  const [isScrolled, setIsScrolled] = useState(false);
   const activeLink = ({ isActive }) => (isActive ? 'active-link' : '');
+
+  // Get scroll position and set state to change navbar style
+  const [isScrolled, setIsScrolled] = useState(false);
   const handleScroll = () => {
     const position = window.scrollY;
     if (position > 20) {
@@ -20,13 +22,27 @@ export const Home = () => {
     window.addEventListener('scroll', handleScroll);
   }, []);
 
+  // Define logo according to screen size
+  const [logo, setLogo] = useState('');
+  const handleLogo = () => {
+    if (window.innerWidth > 768) {
+      setLogo('/img/logoipsum.svg');
+    } else {
+      setLogo('/img/logo.svg');
+    }
+  };
+  useEffect(() => {
+    handleLogo();
+    window.addEventListener('resize', handleLogo);
+  }, []);
+
   return (
     <>
       <nav className={isScrolled ? 'scrolled' : ''}>
         <div className='container menu-desktop'>
           <img
             alt='logo'
-            src='/img/Logoipsum.svg'
+            src={logo}
           />
           <ul>
             <li>
@@ -81,7 +97,6 @@ export const Home = () => {
               <FaRegTimesCircle />
             </button>
           </div>
-          {/* Opciones del Menú */}
           <ul>
             <li>Opcion 1</li>
             <li>Opcion 2</li>

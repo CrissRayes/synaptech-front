@@ -23,11 +23,11 @@ export const Home = () => {
   return (
     <>
       <header className={isScrolled ? 'scrolled' : ''}>
+        <img
+          alt='logo'
+          src='/img/Logoipsum.svg'
+        />
         <nav className='container'>
-          <img
-            alt='logo'
-            src='/img/Logoipsum.svg'
-          />
           <ul>
             <li>
               <NavLink
@@ -38,13 +38,28 @@ export const Home = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink>Diseño Web</NavLink>
+              <NavLink
+                to='/web-design'
+                className={activeLink}
+              >
+                Diseño Web
+              </NavLink>
             </li>
             <li>
-              <NavLink>Software</NavLink>
+              <NavLink
+                to='/software'
+                className={activeLink}
+              >
+                Software
+              </NavLink>
             </li>
             <li>
-              <NavLink>Data Analytics</NavLink>
+              <NavLink
+                to='/analytics'
+                className={activeLink}
+              >
+                Data Analytics
+              </NavLink>
             </li>
           </ul>
           <button

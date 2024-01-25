@@ -5,9 +5,8 @@ import { useEffect, useState } from 'react';
 export const Home = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuOpen = () => setIsMenuOpen(!isMenuOpen);
-
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const activeLink = ({ isActive }) => (isActive ? 'active-link' : '');
   const handleScroll = () => {
     const position = window.scrollY;
     if (position > 20) {
@@ -31,7 +30,12 @@ export const Home = () => {
           />
           <ul>
             <li>
-              <NavLink>Home</NavLink>
+              <NavLink
+                to='/'
+                className={activeLink}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
               <NavLink>Diseño Web</NavLink>

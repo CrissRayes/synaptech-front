@@ -11,6 +11,8 @@ header {
   z-index: map-get($z-index, 'header');
   padding: 8rem 4rem;
   transition: map-get($transition, 'slow');
+  display: flex;
+  justify-content: space-between;
 
   // scrolled
   &.scrolled {
@@ -21,9 +23,8 @@ header {
 
   & nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    overflow: hidden;
 
     & ul {
       display: flex;
@@ -34,7 +35,6 @@ header {
 
       & li {
         margin-left: 3rem;
-
         &:first-child {
           margin-left: 0;
         }
@@ -59,7 +59,7 @@ header {
     background-color: transparent;
     border: none;
     color: $color-grey-dark;
-    font-size: $font-size-xl;
+    font-size: 4rem;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
     transition: map-get($transition, 'fast');
@@ -94,7 +94,7 @@ header {
 
   &__heading {
     margin-bottom: $spacing-md;
-    font-size: $font-size-xxxxl;
+    font-size: $font-size-4xl;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
   }

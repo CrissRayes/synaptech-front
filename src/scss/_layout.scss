@@ -2,30 +2,25 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 $spacing-sm;
-  width: map-get($width, 'container');
-}
+  width: 100%;
 
-.container-sm {
-  margin: 0 auto;
-  padding: 0 $spacing-sm;
-  width: map-get($width, 'container-sm');
-}
+  @media (min-width: map-get($breakpoints, 'sm')) {
+    max-width: 550px;
+  }
 
-.container-md {
-  margin: 0 auto;
-  padding: 0 $spacing-sm;
-  width: map-get($width, 'container-md');
-}
+  @media (min-width: map-get($breakpoints, 'md')) {
+    max-width: 720px;
+  }
 
-.container-lg {
-  margin: 0 auto;
-  padding: 0 $spacing-sm;
-  width: map-get($width, 'container-lg');
-}
+  @media (min-width: map-get($breakpoints, 'lg')) {
+    max-width: 980px;
+  }
 
-.container-xl {
-  margin: 0 auto;
-  padding: 0 $spacing-sm;
-  width: map-get($width, 'container-xl');
+  @media (min-width: map-get($breakpoints, 'xl')) {
+    max-width: 1200px;
+  }
+
+  @media (min-width: map-get($breakpoints, '2xl')) {
+    max-width: 1320px;
+  }
 }

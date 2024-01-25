@@ -8,15 +8,17 @@ $logo-height: 2.5rem;
 
 // ***** Breakpoints ***** //
 $breakpoints: (
-  // 16px * 30 = 480px
-  // 16px * 45 = 720px
-  // 16px * 65 = 1040px
-  // 16px * 80 = 1280px
+  // sm: 16px * 36 = 576px
+  // md: 16px * 48 = 768px
+  // lg: 16px * 64 = 1024px
+  // xl: 16px * 80 = 1280px
+  // 2xl: 16px * 96 = 1536px
   xs: 0,
-  sm: 30em,
-  md: 45em,
-  lg: 65em,
-  xl: 80em
+  sm: 36em,
+  md: 48em,
+  lg: 64em,
+  xl: 80em,
+  2xl: 96em
 );
 
 // ***** Font Sizes ***** //
@@ -63,21 +65,6 @@ $z-index: (
 
 // ***** Transitions ***** //
 $transition: all 0.2s ease-in-out;
-
-// ***** Widths ***** //
-$width: (
-  container: 120rem,
-  container-sm: 80rem,
-  container-md: 100rem,
-  container-lg: 120rem,
-  container-xl: 140rem,
-);
-
-// ***** Heights ***** //
-$height: (
-  header: 8rem,
-  footer: 6rem,
-);
 
 // ***** Shadows ***** //
 $shadow: (

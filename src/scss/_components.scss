@@ -1,5 +1,43 @@
 @use 'variables' as *;
 
+// ***** Pointer Following Mouse with delay ***** //
+
+.cursorMouse {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  // transform: translateZ(0);
+  // visibility: hidden;
+  text-align: center;
+
+  &.pointer {
+    margin-left: -3px;
+    margin-top: -3px;
+    width: 8px;
+    height: 8px;
+    z-index: 1000;
+    background-color: $color-green;
+    opacity: 0.8;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+  }
+
+  &.pointer-outer {
+    margin-left: -12px;
+    margin-top: -12px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid $color-green;
+    box-sizing: border-box;
+    z-index: 999;
+    opacity: 0.8;
+    transition: all 0.3s ease-out;
+  }
+}
+
 // ***** Navigation ***** //
 nav {
   color: $color-grey-dark;
@@ -163,11 +201,9 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  // padding: 20rem;
   margin-bottom: 2rem;
   color: $color-grey-dark;
   height: 100vh;
-  // TODO: change background image
   background-image: url('/img/hero1.jpg');
   background-size: cover;
   background-position: center;
@@ -175,17 +211,19 @@ nav {
   position: relative;
 
   &-info {
-    // crear dos columnas con flex. la columna izquierda debe tener un 75% del ancho total y la derecha un 25%
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transform: translateY(5%);
 
     @media (max-width: map-get($breakpoints, 'md')) {
       flex-direction: column;
       align-items: flex-start;
+      gap: 4rem;
     }
   }
 
+  // Title is at the left side of the hero
   &-title {
     width: 70%;
     @media (max-width: map-get($breakpoints, 'md')) {
@@ -193,6 +231,7 @@ nav {
     }
   }
 
+  // Text is placed below the title and is at the right side of the hero
   &-text {
     width: 30%;
     margin-left: 3rem;
@@ -202,12 +241,15 @@ nav {
     }
   }
 
+  // Span is to highlight the text in the right side of the hero
   &-span {
     color: $color-green-dark;
     margin-left: 0.5rem;
     font-weight: 500;
   }
 
+  // Left info contains the vertical text and the arrows
+  // and is hidden on mobile
   & .left-info {
     position: absolute;
     top: 50%;

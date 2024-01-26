@@ -37,6 +37,20 @@ export const Home = () => {
   //   window.addEventListener('resize', handleLogo);
   // }, []);
 
+  // make pointer follow mouse position and pointer-outer follow pointer with a delay
+  const handlePointer = (e) => {
+    const pointer = document.getElementById('pointer');
+    const pointerOuter = document.getElementById('pointer-outer');
+    pointer.style.left = `${e.clientX}px`;
+    pointer.style.top = `${e.clientY}px`;
+    pointerOuter.style.left = `${e.clientX}px`;
+    pointerOuter.style.top = `${e.clientY}px`;
+  };
+
+  useEffect(() => {
+    window.addEventListener('mousemove', handlePointer);
+  }, []);
+
   return (
     <>
       <nav className={isScrolled ? 'scrolled' : ''}>
@@ -65,10 +79,10 @@ export const Home = () => {
             </li>
             <li>
               <NavLink
-                to='/software'
+                to='/marketing'
                 className={activeLink}
               >
-                Software
+                Marketing
               </NavLink>
             </li>
             <li>
@@ -127,9 +141,6 @@ export const Home = () => {
           <p className='hero-text'>
             Somos una agencia de diseño web y marketing digital especialista en
             estrategia, diseño y experiencia de usuario.
-            <span className='hero-span'>
-              Creamos experiencia únicas para personas y empresas únicas.
-            </span>
           </p>
         </div>
       </section>
@@ -173,6 +184,16 @@ export const Home = () => {
           inventore fugiat! Neque ipsum ducimus fugit?
         </p>
       </section>
+      {/* Pointer following mouse */}
+      <span
+        id='pointer'
+        className='cursorMouse pointer'
+      ></span>
+      <span
+        id='pointer-outer'
+        className='cursorMouse pointer-outer'
+      ></span>
+      {/* End circle following mouse */}
     </>
   );
 };

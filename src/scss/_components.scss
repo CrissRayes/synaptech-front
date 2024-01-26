@@ -65,6 +65,9 @@ nav {
           font-weight: $font-weight-bold;
           text-transform: uppercase;
           transition: map-get($transition, 'fast');
+          &.active-link {
+            color: $color-green-dark;
+          }
 
           &:hover {
             color: $color-green;

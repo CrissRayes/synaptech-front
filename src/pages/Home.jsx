@@ -118,9 +118,12 @@ export const Home = () => {
             className='dotarrow'
           />
           <div className='vertical'>conocer más</div>
+          <img src='/img/arrow.svg' />
         </div>
         <div className='container'>
-          <h1>Home</h1>
+          <h1 className='title'>
+            Experiencia única en Diseño Web & Marketing Digital
+          </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             voluptates, quibusdam, quae, autem voluptatum quos nemo dolorum

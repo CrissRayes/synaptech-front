@@ -62,6 +62,7 @@ p {
   margin-bottom: $spacing-md;
 }
 
-.active-link {
-  color: $color-green-dark;
+.title {
+  text-transform: uppercase;
+  font-size: clamp(4rem, 5vw, 8rem);
 }

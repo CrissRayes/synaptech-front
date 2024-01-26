@@ -24,18 +24,18 @@ export const Home = () => {
   }, []);
 
   // Define logo according to screen size
-  const [logo, setLogo] = useState('');
-  const handleLogo = () => {
-    if (window.innerWidth > 768) {
-      setLogo('/img/logoipsum.svg');
-    } else {
-      setLogo('/img/logo.svg');
-    }
-  };
-  useEffect(() => {
-    handleLogo();
-    window.addEventListener('resize', handleLogo);
-  }, []);
+  // const [logo, setLogo] = useState('');
+  // const handleLogo = () => {
+  //   if (window.innerWidth > 768) {
+  //     setLogo('/img/logoipsum.svg');
+  //   } else {
+  //     setLogo('/img/logo.svg');
+  //   }
+  // };
+  // useEffect(() => {
+  //   handleLogo();
+  //   window.addEventListener('resize', handleLogo);
+  // }, []);
 
   return (
     <>
@@ -43,7 +43,7 @@ export const Home = () => {
         <div className='container menu-desktop'>
           <img
             alt='logo'
-            src={logo}
+            src='/img/logoipsum.svg'
             className='logo'
           />
           <ul>
@@ -120,16 +120,16 @@ export const Home = () => {
           <div className='vertical'>conocer más</div>
           <img src='/img/arrow.svg' />
         </div>
-        <div className='container'>
-          <h1 className='title'>
+        <div className='container hero-info'>
+          <h1 className='title hero-title'>
             Experiencia única en Diseño Web & Marketing Digital
           </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            voluptates, quibusdam, quae, autem voluptatum quos nemo dolorum
-            excepturi voluptatem quia laborum? Quibusdam, quia. Quisquam
-            voluptates, quibusdam, quae, autem voluptatum quos nemo dolorum
-            excepturi voluptatem quia laborum? Quibusdam, quia.
+          <p className='hero-text'>
+            Somos una agencia de diseño web y marketing digital especialista en
+            estrategia, diseño y experiencia de usuario.
+            <span className='hero-span'>
+              Creamos experiencia únicas para personas y empresas únicas.
+            </span>
           </p>
         </div>
       </section>

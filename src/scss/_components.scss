@@ -29,11 +29,7 @@ nav {
   }
 
   & .logo {
-    width: auto;
-
-    @media (max-width: map-get($breakpoints, 'md')) {
-      width: 4rem;
-    }
+    max-width: 200px;
   }
 
   & .menu-desktop {
@@ -178,42 +174,44 @@ nav {
   background-repeat: no-repeat;
   position: relative;
 
-  &__text-box {
-    text-align: center;
-  }
+  &-info {
+    // crear dos columnas con flex. la columna izquierda debe tener un 75% del ancho total y la derecha un 25%
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-  &__heading {
-    margin-bottom: $spacing-md;
-    font-size: $font-size-4xl;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-  }
-
-  &__sub-heading {
-    margin-bottom: $spacing-lg;
-    font-size: $font-size-xl;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-  }
-
-  &__btn {
-    background-color: $color-green;
-    color: $color-white;
-    font-size: $font-size-sm;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-    padding: $spacing-xs $spacing-sm;
-    border-radius: $border-radius;
-    transition: map-get($transition, 'fast');
-
-    &:hover {
-      background-color: $color-green-dark;
+    @media (max-width: map-get($breakpoints, 'md')) {
+      flex-direction: column;
+      align-items: flex-start;
     }
+  }
+
+  &-title {
+    width: 70%;
+    @media (max-width: map-get($breakpoints, 'md')) {
+      width: 100%;
+    }
+  }
+
+  &-text {
+    width: 30%;
+    margin-left: 3rem;
+    @media (max-width: map-get($breakpoints, 'md')) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &-span {
+    color: $color-green-dark;
+    margin-left: 0.5rem;
+    font-weight: 500;
   }
 
   & .left-info {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     left: 3rem;
     display: flex;
     flex-direction: column;

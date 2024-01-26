@@ -95,7 +95,10 @@ export const Home = () => {
         `}
         >
           <div>
-            <button onClick={handleMenuOpen}>
+            <button
+              onClick={handleMenuOpen}
+              className='close-btn'
+            >
               <FaRegTimesCircle />
             </button>
           </div>
@@ -108,6 +111,14 @@ export const Home = () => {
         </div>
       </nav>
       <section className='hero'>
+        <div className='left-info'>
+          <img
+            src='/img/dotarrow.svg'
+            alt='dotarrow'
+            className='dotarrow'
+          />
+          <div className='vertical'>conocer más</div>
+        </div>
         <div className='container'>
           <h1>Home</h1>
           <p>

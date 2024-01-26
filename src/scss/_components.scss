@@ -7,18 +7,33 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba($color-white, 0.5);
+  background-color: rgba($color-white, 0);
   z-index: map-get($z-index, 'header');
-  padding: 8rem 4rem;
+  padding: 8rem 0;
   transition: map-get($transition, 'slow');
   display: flex;
   justify-content: space-between;
 
-  // scrolled
+  @media (max-width: map-get($breakpoints, 'md')) {
+    padding: 3rem 0;
+  }
+
   &.scrolled {
     background-color: rgba($color-white, 1);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     padding: 3rem 4rem;
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      padding: 1.5rem 0;
+    }
+  }
+
+  & .logo {
+    width: auto;
+
+    @media (max-width: map-get($breakpoints, 'md')) {
+      width: 4rem;
+    }
   }
 
   & .menu-desktop {
@@ -59,12 +74,11 @@ nav {
     }
   }
 
-  & button {
+  & .menu-btn {
     background-color: transparent;
     border: none;
     color: $color-grey-dark;
     font-size: 4rem;
-    font-weight: $font-weight-bold;
     text-transform: uppercase;
     transition: map-get($transition, 'fast');
     cursor: pointer;

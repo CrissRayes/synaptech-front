@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import { FaBars, FaRegTimesCircle } from 'react-icons/fa';
+import { FaRegTimesCircle } from 'react-icons/fa';
+import { HiBars3 } from 'react-icons/hi2';
 import { useEffect, useState } from 'react';
 
 export const Home = () => {
@@ -11,7 +12,7 @@ export const Home = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const handleScroll = () => {
     const position = window.scrollY;
-    if (position > 20) {
+    if (position > 30) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -43,6 +44,7 @@ export const Home = () => {
           <img
             alt='logo'
             src={logo}
+            className='logo'
           />
           <ul>
             <li>
@@ -78,15 +80,15 @@ export const Home = () => {
               </NavLink>
             </li>
           </ul>
+          <button
+            onClick={handleMenuOpen}
+            className='menu-btn'
+          >
+            <HiBars3 className='btn-icon' />
+          </button>
         </div>
         {/* Menu Mobile */}
 
-        <button
-          onClick={handleMenuOpen}
-          className='menu-btn'
-        >
-          <FaBars />
-        </button>
         <div
           className={`menu-mobile
           ${isMenuOpen ? 'open' : ''}

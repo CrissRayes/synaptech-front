@@ -23,20 +23,6 @@ export const Home = () => {
     window.addEventListener('scroll', handleScroll);
   }, []);
 
-  // Define logo according to screen size
-  // const [logo, setLogo] = useState('');
-  // const handleLogo = () => {
-  //   if (window.innerWidth > 768) {
-  //     setLogo('/img/logoipsum.svg');
-  //   } else {
-  //     setLogo('/img/logo.svg');
-  //   }
-  // };
-  // useEffect(() => {
-  //   handleLogo();
-  //   window.addEventListener('resize', handleLogo);
-  // }, []);
-
   // make pointer follow mouse position and pointer-outer follow pointer with a delay
   const handlePointer = (e) => {
     const pointer = document.getElementById('pointer');
@@ -49,6 +35,24 @@ export const Home = () => {
 
   useEffect(() => {
     window.addEventListener('mousemove', handlePointer);
+  }, []);
+
+  // Parallax effect on scroll
+  const handleParallax = () => {
+    const parallax = document.querySelectorAll('.parallax-card');
+
+    // when reach the position of the element, the parallax effect starts
+    if (window.scrollY > 900) {
+      parallax.forEach((item) => {
+        item.style.transform = `translateY(-${
+          window.scrollY * item.dataset.speed
+        }px)`;
+      });
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleParallax);
   }, []);
 
   return (
@@ -144,44 +148,86 @@ export const Home = () => {
           </p>
         </div>
       </section>
-      <section>
+      <section className='container'>
+        <div className='services'>
+          <div>Descripcion del lado izquierdo</div>
+          <div className='parallax-container'>
+            <div
+              className='parallax-card'
+              data-speed='0.1'
+            >
+              <div className='card'>
+                <h2>Tarjeta 1</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam, voluptatum.
+                </p>
+              </div>
+              <div className='card'>
+                <h2>Tarjeta 1</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam, voluptatum.
+                </p>
+              </div>
+            </div>
+            <div
+              className='parallax-card'
+              data-speed='0.06'
+            >
+              <div className='card'>
+                <h2>Tarjeta 2</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam, voluptatum.
+                </p>
+              </div>
+              <div className='card'>
+                <h2>Tarjeta 2</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Quisquam, voluptatum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Lorem */}
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
-          sapiente architecto exercitationem nisi sit, ipsum enim ad quos et
-          veniam officiis amet ipsa cupiditate, ab consequatur inventore sunt
-          possimus aperiam! Eaque a ducimus repudiandae inventore rem
-          architecto, quia pariatur animi. Amet, nulla! Aut sed cupiditate
-          expedita ab blanditiis, repellat tenetur consequuntur aspernatur
-          doloribus. Maiores laboriosam, id temporibus quod distinctio ullam.
-          Laboriosam quo expedita a nisi iusto omnis reprehenderit accusantium
-          numquam necessitatibus maiores hic, similique adipisci labore,
-          facilis, consectetur optio eveniet et voluptatum cumque tempore
-          quisquam quaerat nihil. Veniam, corrupti dolores! Asperiores
-          exercitationem tempore vitae dolorum doloremque totam laborum, nisi
-          natus veritatis laboriosam, eius minima. Id sit soluta in architecto
-          exercitationem necessitatibus nulla incidunt, quia placeat! Quaerat
-          exercitationem facilis repellat quo? Nostrum nihil eligendi velit
-          laudantium quae expedita ducimus, labore maiores at numquam amet?
-          Voluptatem nisi numquam minus cumque porro repellat, quasi sit cum
-          expedita magnam, nobis rem aliquam, dignissimos dolorum. Vel dolorem
-          laboriosam mollitia a? Sed itaque quae repellendus, minima explicabo
-          enim! Blanditiis accusamus doloribus ipsa beatae et asperiores
-          provident, facilis reprehenderit quasi? Molestiae quis ullam minus
-          eligendi quidem architecto. Ea fugiat enim dicta impedit fuga repellat
-          quasi ad reiciendis quia! Voluptas impedit suscipit, nam consequuntur
-          sint ducimus deleniti repellat. Vero porro laudantium, quibusdam
-          officiis est libero ad facere voluptates? Accusantium at adipisci
-          illo, architecto reiciendis voluptate porro quam mollitia
-          voluptatibus. Cum, nobis. Nulla, nisi error illum dolore alias
-          officiis, nesciunt magnam, odio dolor quaerat provident. Laboriosam
-          repellat voluptate magni. Nobis itaque id labore cupiditate quidem
-          amet velit nam, dolore quam quis numquam impedit, reiciendis
-          dignissimos suscipit explicabo alias. Suscipit dolor voluptate
-          dignissimos quia veniam accusamus ullam fugiat dolores at. Esse
-          voluptatem dolore dolorum eveniet aut architecto, quisquam, neque
-          dolores praesentium, dolor minus. Cupiditate quis reprehenderit
-          quibusdam, quasi optio, quo quod repudiandae porro consectetur
-          inventore fugiat! Neque ipsum ducimus fugit?
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          aspernatur ab dolor earum dolores amet animi deserunt veritatis in,
+          totam rem non modi nobis facere, ipsam recusandae nam velit eius!
+          Officia soluta, dicta iure tenetur deserunt repellendus ullam expedita
+          earum, rerum non ad reiciendis nisi vitae dolorum nobis atque aperiam
+          id dolores omnis et facilis nesciunt, saepe rem dolorem. Iste?
+          Molestias deserunt quia deleniti labore voluptatibus exercitationem
+          laborum pariatur libero? Odio temporibus maxime, ad necessitatibus
+          quasi enim consectetur odit non accusamus vero dignissimos autem quam
+          pariatur repellendus quo quibusdam explicabo. Atque necessitatibus
+          doloribus laboriosam nostrum a beatae qui velit laudantium
+          perspiciatis quod sed nobis, praesentium, quaerat voluptate expedita
+          delectus itaque consequatur sit! Doloremque eos maiores sunt quia
+          exercitationem et omnis. Et sit quis adipisci repudiandae quia ea
+          fugiat assumenda at totam magnam sunt magni illo porro provident
+          voluptatum quibusdam necessitatibus itaque, iusto unde! Ipsum
+          perferendis molestias totam placeat esse molestiae! Eum dolorum atque
+          ipsum fugiat architecto itaque aperiam similique cum aspernatur
+          numquam amet officiis recusandae rem suscipit, necessitatibus alias
+          magnam ab eos debitis excepturi consequuntur dicta sit odit. Nemo,
+          dignissimos. Vero aperiam corrupti consectetur adipisci totam
+          deleniti, ex nesciunt asperiores incidunt itaque modi! Quidem
+          accusamus mollitia dolorem impedit doloribus? Illo distinctio odit eos
+          ratione corrupti hic magni est aliquid laborum. Veritatis tempora
+          beatae itaque dicta eaque consequuntur accusantium illo nemo nam
+          tenetur vel, molestiae aliquam blanditiis similique cupiditate quos
+          dolore quidem nostrum rem incidunt! At laboriosam ad fugit doloribus
+          officia! Laudantium labore rerum provident iure ipsa quidem
+          perferendis, facilis nulla ratione qui non veritatis doloribus
+          accusamus ipsam a aperiam id nihil tempore veniam fugit et! Libero
+          culpa nihil aliquid repellat? Culpa perspiciatis corrupti facilis cum
+          dicta! Veritatis eum corporis accusamus dolorum iste voluptas cum
+          corrupti qui nisi, consequatur, deleniti ipsum at minima dignissimos
+          quibusdam perferendis! Voluptatum corporis expedita autem iure!
         </p>
       </section>
       {/* Pointer following mouse */}

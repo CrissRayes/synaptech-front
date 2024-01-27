@@ -277,3 +277,32 @@ nav {
     }
   }
 }
+
+// ***** Parallax Cards ***** //
+.parallax-container {
+  display: flex;
+  gap: 2rem;
+
+  & .card {
+    width: 300px;
+    height: 300px;
+    padding: 2rem;
+    background-color: $color-white;
+    border-radius: $border-radius;
+    box-shadow: map-get($shadow, 'default');
+    margin-bottom: 2rem;
+    transition: map-get($transition, 'fast');
+
+    &:hover {
+      box-shadow: map-get($shadow, 'hover');
+      transform: translate(0, -1rem);
+    }
+  }
+}
+
+// ***** Services ***** //
+.services {
+  margin-top: 10rem; // TODO: remove this
+  display: flex;
+  justify-content: space-between;
+}

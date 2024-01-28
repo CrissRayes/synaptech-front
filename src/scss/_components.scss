@@ -38,6 +38,10 @@
   }
 }
 
+.logo {
+  max-width: 200px;
+}
+
 // ***** Navigation ***** //
 nav {
   color: $color-grey-dark;
@@ -64,10 +68,6 @@ nav {
     @media (max-width: map-get($breakpoints, 'md')) {
       padding: 1.5rem 0;
     }
-  }
-
-  & .logo {
-    max-width: 200px;
   }
 
   & .menu-desktop {
@@ -221,31 +221,23 @@ nav {
       align-items: flex-start;
       gap: 4rem;
     }
-  }
-
-  // Title is at the left side of the hero
-  &-title {
-    width: 70%;
-    @media (max-width: map-get($breakpoints, 'md')) {
-      width: 100%;
+    // Title is at the left side of the hero
+    &-title {
+      width: 70%;
+      @media (max-width: map-get($breakpoints, 'md')) {
+        width: 100%;
+      }
     }
-  }
 
-  // Text is placed below the title and is at the right side of the hero
-  &-text {
-    width: 30%;
-    margin-left: 3rem;
-    @media (max-width: map-get($breakpoints, 'md')) {
-      width: 100%;
-      margin-left: 0;
+    // Text is placed below the title and is at the right side of the hero
+    &-text {
+      width: 30%;
+      margin-left: 3rem;
+      @media (max-width: map-get($breakpoints, 'md')) {
+        width: 100%;
+        margin-left: 0;
+      }
     }
-  }
-
-  // Span is to highlight the text in the right side of the hero
-  &-span {
-    color: $color-green-dark;
-    margin-left: 0.5rem;
-    font-weight: 500;
   }
 
   // Left info contains the vertical text and the arrows
@@ -305,4 +297,10 @@ nav {
   margin-top: 10rem; // TODO: remove this
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+// ***** Footer ***** //
+footer {
+  background-color: $color-grey-dark;
 }

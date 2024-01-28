@@ -23,7 +23,7 @@ export const Home = () => {
     window.addEventListener('scroll', handleScroll);
   }, []);
 
-  // make pointer follow mouse position and pointer-outer follow pointer with a delay
+  // make pointer follow mouse position
   const handlePointer = (e) => {
     const pointer = document.getElementById('pointer');
     const pointerOuter = document.getElementById('pointer-outer');
@@ -41,14 +41,11 @@ export const Home = () => {
   const handleParallax = () => {
     const parallax = document.querySelectorAll('.parallax-card');
 
-    // when reach the position of the element, the parallax effect starts
-    if (window.scrollY > 900) {
-      parallax.forEach((item) => {
-        item.style.transform = `translateY(-${
-          window.scrollY * item.dataset.speed
-        }px)`;
-      });
-    }
+    parallax.forEach((item) => {
+      item.style.transform = `translateY(-${
+        window.scrollY * item.dataset.speed
+      }px)`;
+    });
   };
 
   useEffect(() => {
@@ -150,11 +147,20 @@ export const Home = () => {
       </section>
       <section className='container'>
         <div className='services'>
-          <div>Descripcion del lado izquierdo</div>
+          <div>
+            <h2>Descripcion del lado izquierdo</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
+              repellendus adipisci eos harum similique minus corrupti atque
+              expedita dolor? Magni impedit, tempora eos commodi saepe et
+              assumenda est qui soluta.
+            </p>
+          </div>
           <div className='parallax-container'>
+            {/* Left cards */}
             <div
               className='parallax-card'
-              data-speed='0.1'
+              data-speed='0.08'
             >
               <div className='card'>
                 <h2>Tarjeta 1</h2>
@@ -164,16 +170,18 @@ export const Home = () => {
                 </p>
               </div>
               <div className='card'>
-                <h2>Tarjeta 1</h2>
+                <h2>Tarjeta 3</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quisquam, voluptatum.
                 </p>
               </div>
             </div>
+            {/* End left cards */}
+            {/* Right Cards */}
             <div
               className='parallax-card'
-              data-speed='0.06'
+              data-speed='0.12'
             >
               <div className='card'>
                 <h2>Tarjeta 2</h2>
@@ -183,53 +191,41 @@ export const Home = () => {
                 </p>
               </div>
               <div className='card'>
-                <h2>Tarjeta 2</h2>
+                <h2>Tarjeta 4</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Quisquam, voluptatum.
                 </p>
               </div>
             </div>
+            {/* End right cards */}
           </div>
         </div>
-        {/* Lorem */}
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam
-          aspernatur ab dolor earum dolores amet animi deserunt veritatis in,
-          totam rem non modi nobis facere, ipsam recusandae nam velit eius!
-          Officia soluta, dicta iure tenetur deserunt repellendus ullam expedita
-          earum, rerum non ad reiciendis nisi vitae dolorum nobis atque aperiam
-          id dolores omnis et facilis nesciunt, saepe rem dolorem. Iste?
-          Molestias deserunt quia deleniti labore voluptatibus exercitationem
-          laborum pariatur libero? Odio temporibus maxime, ad necessitatibus
-          quasi enim consectetur odit non accusamus vero dignissimos autem quam
-          pariatur repellendus quo quibusdam explicabo. Atque necessitatibus
-          doloribus laboriosam nostrum a beatae qui velit laudantium
-          perspiciatis quod sed nobis, praesentium, quaerat voluptate expedita
-          delectus itaque consequatur sit! Doloremque eos maiores sunt quia
-          exercitationem et omnis. Et sit quis adipisci repudiandae quia ea
-          fugiat assumenda at totam magnam sunt magni illo porro provident
-          voluptatum quibusdam necessitatibus itaque, iusto unde! Ipsum
-          perferendis molestias totam placeat esse molestiae! Eum dolorum atque
-          ipsum fugiat architecto itaque aperiam similique cum aspernatur
-          numquam amet officiis recusandae rem suscipit, necessitatibus alias
-          magnam ab eos debitis excepturi consequuntur dicta sit odit. Nemo,
-          dignissimos. Vero aperiam corrupti consectetur adipisci totam
-          deleniti, ex nesciunt asperiores incidunt itaque modi! Quidem
-          accusamus mollitia dolorem impedit doloribus? Illo distinctio odit eos
-          ratione corrupti hic magni est aliquid laborum. Veritatis tempora
-          beatae itaque dicta eaque consequuntur accusantium illo nemo nam
-          tenetur vel, molestiae aliquam blanditiis similique cupiditate quos
-          dolore quidem nostrum rem incidunt! At laboriosam ad fugit doloribus
-          officia! Laudantium labore rerum provident iure ipsa quidem
-          perferendis, facilis nulla ratione qui non veritatis doloribus
-          accusamus ipsam a aperiam id nihil tempore veniam fugit et! Libero
-          culpa nihil aliquid repellat? Culpa perspiciatis corrupti facilis cum
-          dicta! Veritatis eum corporis accusamus dolorum iste voluptas cum
-          corrupti qui nisi, consequatur, deleniti ipsum at minima dignissimos
-          quibusdam perferendis! Voluptatum corporis expedita autem iure!
-        </p>
       </section>
+      <section>
+        <div className='container'>
+          <h2>Titulo de la seccion</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            voluptatum.
+          </p>
+        </div>
+      </section>
+      <footer>
+        <div className='container'>
+          <div className='footer-info'>
+            <img
+              src='/img/logowhite.png'
+              alt='logo'
+              className='logo'
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              voluptatum.
+            </p>
+          </div>
+        </div>
+      </footer>
       {/* Pointer following mouse */}
       <span
         id='pointer'

@@ -146,7 +146,7 @@ export const Home = () => {
         </div>
       </section>
       <section className='container'>
-        <div className='services'>
+        <div className='flex justify-between align-center mt-5'>
           <div>
             <h2>Descripcion del lado izquierdo</h2>
             <p>
@@ -202,12 +202,59 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      {/* Services detail */}
+      <section className='services'>
+        <div className='container'>
+          <h2>Titulo seccion de cards 2</h2>
+          <div className='services-cards'>
+            {/* Card 1 */}
+            <div className='card-green'>
+              <span>Card Icon</span>
+              <h4>Card title</h4>
+              <p>Card Text</p>
+            </div>
+            {/* Card 2 */}
+            <div className='card-green'>
+              <span>Card Icon</span>
+              <h4>Card title</h4>
+              <p>Card Text</p>
+            </div>
+            {/* Card 3 */}
+            <div className='card-green'>
+              <span>Card Icon</span>
+              <h4>Card title</h4>
+              <p>Card Text</p>
+            </div>
+            {/* Card 1 */}
+            <div className='card-green'>
+              <span>Card Icon</span>
+              <h4>Card title</h4>
+              <p>Card Text</p>
+            </div>
+            {/* Card 2 */}
+            <div className='card-green'>
+              <span>Card Icon</span>
+              <h4>Card title</h4>
+              <p>Card Text</p>
+            </div>
+            {/* Card 3 */}
+            <div className='card-green'>
+              <span>Card Icon</span>
+              <h4>Card title</h4>
+              <p>Card Text</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Sección Clientes */}
       <section>
         <div className='container'>
-          <h2>Titulo de la seccion</h2>
+          <h2>Clientes Felices</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptatum.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+            perferendis natus aliquam sunt velit distinctio maxime eveniet
+            voluptates dolores eaque tempora corporis voluptas vitae
+            accusantium, in laudantium accusamus, temporibus laboriosam.
           </p>
         </div>
       </section>

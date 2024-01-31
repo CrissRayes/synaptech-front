@@ -307,7 +307,7 @@ nav {
   flex: 0 0 auto;
   width: 100%;
   @media (min-width: map-get($breakpoints, 'md')) {
-    width: calc(100% / 3 - 1rem);
+    width: calc(100% / 2 - 1rem);
   }
   border: 1px solid $color-grey-light;
   padding: 5rem 4rem;
@@ -315,6 +315,7 @@ nav {
   overflow: hidden;
   transition: map-get($transition, 'slow');
   z-index: 1;
+  text-align: center;
 
   // Define el color degradado verde
   &::before {

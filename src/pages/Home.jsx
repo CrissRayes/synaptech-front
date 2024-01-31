@@ -72,18 +72,10 @@ export const Home = () => {
             </li>
             <li>
               <NavLink
-                to='/web-design'
+                to='/software'
                 className={activeLink}
               >
-                Diseño Web
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to='/marketing'
-                className={activeLink}
-              >
-                Marketing
+                software
               </NavLink>
             </li>
             <li>
@@ -92,6 +84,14 @@ export const Home = () => {
                 className={activeLink}
               >
                 Data Analytics
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to='/web-design'
+                className={activeLink}
+              >
+                Diseño Web
               </NavLink>
             </li>
           </ul>
@@ -137,23 +137,22 @@ export const Home = () => {
         </div>
         <div className='container hero-info'>
           <h1 className='title hero-title'>
-            Experiencia única en Diseño Web & Marketing Digital
+            desarrollo de software & diseño web a medida
           </h1>
           <p className='hero-text'>
-            Somos una agencia de diseño web y marketing digital especialista en
-            estrategia, diseño y experiencia de usuario.
+            Haz crecer tu negocio y ahorra tiempo con un software y/o una web
+            personalizada que brinde resultados excepcionales.
           </p>
         </div>
       </section>
+      {/* Sección qué hacemos */}
       <section className='container'>
         <div className='flex justify-between align-center mt-5'>
           <div>
-            <h2>Descripcion del lado izquierdo</h2>
+            <h2>Toma el control de tus procesos de negocio</h2>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas
-              repellendus adipisci eos harum similique minus corrupti atque
-              expedita dolor? Magni impedit, tempora eos commodi saepe et
-              assumenda est qui soluta.
+              Aporta el máximo valor a tu negocio y define tu marca a través del
+              desarrollo personalizado de aplicaciones a la medida.
             </p>
           </div>
           <div className='parallax-container'>
@@ -163,17 +162,18 @@ export const Home = () => {
               data-speed='0.08'
             >
               <div className='card'>
-                <h2>Tarjeta 1</h2>
+                <h2>Software a medida</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, voluptatum.
+                  Disfruta de soluciones de software personalizadas diseñadas
+                  teniendo en cuenta tus necesidades únicas y planes futuros.
                 </p>
               </div>
               <div className='card'>
-                <h2>Tarjeta 3</h2>
+                <h2>Uso Eficiente de Recursos</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, voluptatum.
+                  No dejes que nada se desperdicie, ya que tu solución de
+                  software personalizada te ayuda a gestionar los activos de tu
+                  empresa.
                 </p>
               </div>
             </div>
@@ -184,17 +184,18 @@ export const Home = () => {
               data-speed='0.12'
             >
               <div className='card'>
-                <h2>Tarjeta 2</h2>
+                <h2>Procesos Optimizados</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, voluptatum.
+                  Aumenta la productividad de los empleados proporcionando
+                  herramientas de gestión efectivas para las operaciones de tu
+                  negocio.
                 </p>
               </div>
               <div className='card'>
-                <h2>Tarjeta 4</h2>
+                <h2>Automatización de Procesos</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Quisquam, voluptatum.
+                  Automatiza tareas repetitivas y dirige la atención de tu
+                  equipo hacia lo realmente crucial para tu negocio.
                 </p>
               </div>
             </div>
@@ -202,54 +203,58 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      {/* Services detail */}
+      {/* Sección Clientes Felices */}
       <section className='services'>
         <div className='container'>
-          <h2>Titulo seccion de cards 2</h2>
+          <h2>¿Cómo te apoyamos?</h2>
+          <p>
+            Desarrollamos soluciones digitales que te brindan una ventaja
+            competitiva utilizando las últimas tecnologías.
+          </p>
           <div className='services-cards'>
             {/* Card 1 */}
             <div className='card-green'>
               <span>Card Icon</span>
-              <h4>Card title</h4>
-              <p>Card Text</p>
+              <h4>Aplicaciones Web & Mobile</h4>
+              <p>
+                Proporciona el máximo valor a tu negocio con un software
+                personalizado para web o móviles.
+              </p>
             </div>
             {/* Card 2 */}
             <div className='card-green'>
               <span>Card Icon</span>
-              <h4>Card title</h4>
-              <p>Card Text</p>
-            </div>
-            {/* Card 3 */}
-            <div className='card-green'>
-              <span>Card Icon</span>
-              <h4>Card title</h4>
-              <p>Card Text</p>
-            </div>
-            {/* Card 1 */}
-            <div className='card-green'>
-              <span>Card Icon</span>
-              <h4>Card title</h4>
-              <p>Card Text</p>
+              <h4>Desarrollo Web</h4>
+              <p>
+                Diseños atractivos y que generan ventas. Langing pages,
+                corporativos, tiendas online.
+              </p>
             </div>
             {/* Card 2 */}
             <div className='card-green'>
               <span>Card Icon</span>
-              <h4>Card title</h4>
-              <p>Card Text</p>
+              <h4>Desarrollo basado en la nube</h4>
+              <p>
+                Acelera el desarrollo, mejora la calidad del producto final y
+                aumenta la productividad.
+              </p>
             </div>
             {/* Card 3 */}
             <div className='card-green'>
               <span>Card Icon</span>
-              <h4>Card title</h4>
-              <p>Card Text</p>
+              <h4>Data Analytics</h4>
+              <p>
+                Transforma los procesos de toma de decisiones y define
+                estrategias empresariales basadas en datos precisos.
+              </p>
             </div>
           </div>
         </div>
       </section>
-      {/* Sección Clientes */}
+      {/* Sección Quienes Somos */}
       <section>
         <div className='container'>
-          <h2>Clientes Felices</h2>
+          <h2>Quienes Somos</h2>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
             perferendis natus aliquam sunt velit distinctio maxime eveniet

@@ -276,14 +276,13 @@ export const Home = () => {
                 className='client-logo'
               />
               <p className='client-comment'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
-                quibusdam repudiandae tempora quae beatae consectetur non
-                facilis, commodi quod, cupiditate ea amet? Officia illum
-                dolorem, minus est doloribus voluptate corrupti?
+                ¡Increíble! Mi web de cosmética es perfecta. Gracias por captar
+                mi visión y crear una plataforma que refleja la esencia de mi
+                marca. ¡Totalmente satisfecha!
               </p>
               <div className='author'>
                 <img
-                  src='/img/clients/client_1.jpeg'
+                  src='/img/clients/client_5.jpeg'
                   alt='author'
                   className='author-img'
                 />
@@ -302,10 +301,9 @@ export const Home = () => {
                 className='client-logo'
               />
               <p className='client-comment'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
-                quibusdam repudiandae tempora quae beatae consectetur non
-                facilis, commodi quod, cupiditate ea amet? Officia illum
-                dolorem, minus est doloribus voluptate corrupti?
+                La web para mi foodtruck superó mis expectativas. Diseño único y
+                sus funcionalidades son ideales. Mis clientes aman la
+                experiencia online. ¡Gracias por hacerlo posible!
               </p>
               <div className='author'>
                 <img
@@ -328,10 +326,9 @@ export const Home = () => {
                 className='client-logo'
               />
               <p className='client-comment'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
-                quibusdam repudiandae tempora quae beatae consectetur non
-                facilis, commodi quod, cupiditate ea amet? Officia illum
-                dolorem, minus est doloribus voluptate corrupti?
+                Su software para corretaje de propiedades ha revolucionado mi
+                negocio. Eficiente, fácil de usar y ha potenciado nuestras
+                operaciones. ¡Un éxito total! Gracias por su dedicación.
               </p>
               <div className='author'>
                 <img

@@ -41,6 +41,28 @@
 .logo {
   max-width: 200px;
 }
+.btn {
+  background-color: $color-green;
+  border: none;
+  color: $color-white;
+  padding: 1rem 2rem;
+  border-radius: $border-radius;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  transition: map-get($transition, 'fast');
+
+  &:hover {
+    background-color: $color-green-dark;
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+  &:focus {
+    outline: 1px solid $color-green-dark;
+  }
+}
 
 // ***** Navigation ***** //
 nav {
@@ -269,31 +291,36 @@ nav {
 // ***** Sección Software ***** //
 .section-software {
   &-content {
-    padding: 10rem 0;
+    padding: $spacing-sections;
     display: flex;
-    gap: 2rem;
+    gap: 5rem;
   }
 
   &-info {
     flex: 1;
   }
   &-parallax {
-    flex: 2;
+    flex: 1;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
 
     & .card {
-      height: 300px;
+      height: 320px;
       padding: 2rem;
       background-color: $color-white;
       border-radius: $border-radius;
       box-shadow: map-get($shadow, 'default');
       margin-bottom: 2rem;
+      text-align: center;
       transition: map-get($transition, 'fast');
 
       &:hover {
         box-shadow: map-get($shadow, 'hover');
         transform: translate(0, -1rem);
+      }
+
+      & p {
+        font-size: $font-size-sm;
       }
     }
   }
@@ -301,7 +328,7 @@ nav {
 
 // ***** Cómo te apoyamos ***** //
 .services {
-  padding: 10rem 0;
+  padding: 16rem 0;
   background-color: $color-grey-dark;
   color: white;
 }
@@ -324,6 +351,7 @@ nav {
   transition: map-get($transition, 'slow');
   z-index: 1;
   text-align: center;
+  font-size: $font-size-sm;
 
   // Define el color degradado verde
   &::before {
@@ -385,7 +413,7 @@ nav {
 
 // ***** Sección de testimonials ***** //
 .testimonials {
-  padding: 10rem 0;
+  padding: 16rem 0;
   &-content {
     display: flex;
     gap: 2rem;
@@ -455,7 +483,7 @@ nav {
 }
 // ***** Contact Section ***** //
 .contact {
-  padding: 10rem 0;
+  padding: 16rem 0;
   &-content {
     display: flex;
     gap: 5rem;
@@ -536,26 +564,6 @@ nav {
       resize: none;
       min-height: 100px;
     }
-
-    & .btn {
-      background-color: $color-green;
-      border: none;
-      color: $color-white;
-      padding: 1rem 2rem;
-      border-radius: $border-radius;
-      font-size: $font-size-sm;
-      font-weight: $font-weight-bold;
-      text-transform: uppercase;
-      transition: map-get($transition, 'fast');
-
-      &:hover {
-        background-color: $color-green-dark;
-      }
-
-      &:active {
-        transform: scale(0.99);
-      }
-    }
   }
 }
 .form-message {
@@ -565,6 +573,28 @@ nav {
 }
 
 // ***** Footer ***** //
-footer {
+.footer {
+  color: $color-white;
+  padding-top: 5rem;
   background-color: $color-grey-dark;
+
+  &-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: start;
+    & .footer-left {
+      text-align: center;
+    }
+    & .footer-center {
+      text-align: center;
+    }
+    & .footer-right {
+      text-align: center;
+    }
+  }
+
+  &-copyright {
+    text-align: center;
+  }
 }

@@ -41,10 +41,10 @@ export const Home = () => {
   // Parallax effect on scroll
   const handleParallax = () => {
     const parallax = document.querySelectorAll('.card-group');
-
     parallax.forEach((item) => {
+      const initialPosition = parseInt(item.dataset.position, 10);
       item.style.transform = `translateY(-${
-        window.scrollY * item.dataset.speed
+        (window.scrollY - initialPosition) * item.dataset.speed
       }px)`;
     });
   };
@@ -163,21 +163,29 @@ export const Home = () => {
         <div className='section-software-content container'>
           <div className='section-software-info'>
             <h2>
-              <span className='green-text'>Toma el control</span> de tus
-              procesos de negocio
+              Desarrollamos software que te brinda una{' '}
+              <span className='green-text'>ventaja competitiva</span> utilizando
+              las últimas tecnologías.
             </h2>
             <p>
-              Aporta el máximo valor a tu negocio y define tu marca a través del
-              desarrollo personalizado de aplicaciones a la medida.
+              El software personalizado tiene el poder de transformar tu
+              negocio. Desde la automatización de procesos internos y el soporte
+              para operaciones comerciales clave, hasta plataformas de
+              vanguardia orientadas al cliente, las soluciones digitales
+              específicas para la empresa pueden ser el factor clave para
+              impulsar tu negocio.
             </p>
+            <button className='btn'>Contactar</button>
           </div>
           <div className='section-software-parallax'>
             {/* Left cards */}
             <div
               className='card-group'
               data-speed='0.08'
+              data-position='0'
             >
               <div className='card'>
+                <span>Icono</span>
                 <h2>Software a medida</h2>
                 <p>
                   Disfruta de soluciones de software personalizadas diseñadas
@@ -185,6 +193,7 @@ export const Home = () => {
                 </p>
               </div>
               <div className='card'>
+                <span>Icono</span>
                 <h2>Uso Eficiente de Recursos</h2>
                 <p>
                   No dejes que nada se desperdicie, ya que tu solución de
@@ -197,9 +206,11 @@ export const Home = () => {
             {/* Right Cards */}
             <div
               className='card-group'
-              data-speed='0.12'
+              data-speed='0.2'
+              data-position='400'
             >
               <div className='card'>
+                <span>Icono</span>
                 <h2>Procesos Optimizados</h2>
                 <p>
                   Aumenta la productividad de los empleados proporcionando
@@ -208,6 +219,7 @@ export const Home = () => {
                 </p>
               </div>
               <div className='card'>
+                <span>Icono</span>
                 <h2>Automatización de Procesos</h2>
                 <p>
                   Automatiza tareas repetitivas y dirige la atención de tu
@@ -426,7 +438,6 @@ export const Home = () => {
                     className='expert-img'
                   />
                 </div>
-
                 <p className='expert-text'>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Accusantium similique architecto tempora itaque nam,
@@ -471,17 +482,28 @@ export const Home = () => {
       {/***** End Contact Section *****/}
 
       {/***** Footer *****/}
-      <footer>
+      <footer className='footer'>
         <div className='container'>
           <div className='footer-info'>
-            <img
-              src='/img/logowhite.png'
-              alt='logo'
-              className='logo'
-            />
+            <div className='footer-left'>
+              <img
+                src='/img/logowhite.png'
+                alt='logo'
+                className='logo'
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Quisquam, voluptatum.
+              </p>
+            </div>
+            <div className='footer-center'>Centro</div>
+            <div className='footer-right'>Derecha</div>
+          </div>
+          {/*  */}
+          <div className='footer-copyright'>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-              voluptatum.
+              &copy; Copyright 2023 | Gestión Informática{' '}
+              <span className='green-text'>Synaptech</span>
             </p>
           </div>
         </div>

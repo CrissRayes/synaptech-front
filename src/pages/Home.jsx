@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { FaCode, FaLaptopCode, FaRegTimesCircle } from 'react-icons/fa';
 import { FaCloud, FaArrowUpRightDots } from 'react-icons/fa6';
-
 import { HiBars3 } from 'react-icons/hi2';
 import { useEffect, useState } from 'react';
 
@@ -56,6 +55,7 @@ export const Home = () => {
 
   return (
     <>
+      {/***** Navigation *****/}
       <nav className={isScrolled ? 'scrolled' : ''}>
         <div className='container menu-desktop'>
           <img
@@ -113,7 +113,6 @@ export const Home = () => {
           </button>
         </div>
         {/* Menu Mobile */}
-
         <div
           className={`menu-mobile
           ${isMenuOpen ? 'open' : ''}
@@ -135,6 +134,7 @@ export const Home = () => {
           </ul>
         </div>
       </nav>
+      {/***** Hero Section *****/}
       <section className='hero'>
         <div className='left-info'>
           <img
@@ -147,7 +147,8 @@ export const Home = () => {
         </div>
         <div className='container hero-info'>
           <h1 className='title hero-title'>
-            desarrollo de software & diseño web a medida
+            desarrollo de software & diseño web{' '}
+            <span className='green-text'>a la medida</span>
           </h1>
           <p className='hero-text'>
             Haz crecer tu negocio y ahorra tiempo con un software y/o una web
@@ -155,11 +156,16 @@ export const Home = () => {
           </p>
         </div>
       </section>
-      {/* Sección destacar software */}
+      {/***** End Hero Section *****/}
+
+      {/***** Software Section *****/}
       <section className='section-software'>
         <div className='section-software-content container'>
           <div className='section-software-info'>
-            <h2>Toma el control de tus procesos de negocio</h2>
+            <h2>
+              <span className='green-text'>Toma el control</span> de tus
+              procesos de negocio
+            </h2>
             <p>
               Aporta el máximo valor a tu negocio y define tu marca a través del
               desarrollo personalizado de aplicaciones a la medida.
@@ -213,7 +219,9 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      {/* Sección qué hacemos por ti */}
+      {/***** End Software Section *****/}
+
+      {/***** How can we help you Section *****/}
       <section className='services'>
         <div className='container'>
           <h2>¿Cómo te apoyamos?</h2>
@@ -261,7 +269,9 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      {/***** Sección Testimonials *****/}
+      {/***** End How can we help you Section *****/}
+
+      {/***** Testimonials Section *****/}
       <section className='testimonials'>
         <div className='container'>
           <h2>
@@ -288,7 +298,7 @@ export const Home = () => {
                 />
                 <div>
                   <p className='author-name'>Valentina Cárdenas</p>
-                  <p className='author-position'>Emprendedora</p>
+                  <p className='author-position'>Asesora de cosmética</p>
                 </div>
               </div>
             </div>
@@ -313,7 +323,7 @@ export const Home = () => {
                 />
                 <div>
                   <p className='author-name'>Pedro Orellana</p>
-                  <p className='author-position'>Emprendedor</p>
+                  <p className='author-position'>Emprendedor Food Truck</p>
                 </div>
               </div>
             </div>
@@ -346,6 +356,121 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      {/***** End Testimonials Section *****/}
+
+      {/***** Logos Section *****/}
+      <section className='logos'>
+        <div className='container'>
+          <h2>
+            Trabajamos con las{' '}
+            <span className='green-text'>mejores marcas</span>
+          </h2>
+          <div className='logos-content'>
+            <img
+              src='/img/logos/logo1.png'
+              alt='logo'
+              className='logo'
+            />
+            <img
+              src='/img/logos/logo2.png'
+              alt='logo'
+              className='logo'
+            />
+            <img
+              src='/img/logos/logo3.png'
+              alt='logo'
+              className='logo'
+            />
+            <img
+              src='/img/logos/logo4.png'
+              alt='logo'
+              className='logo'
+            />
+            <img
+              src='/img/logos/logo5.png'
+              alt='logo'
+              className='logo'
+            />
+            <img
+              src='/img/logos/logo6.png'
+              alt='logo'
+              className='logo'
+            />
+          </div>
+        </div>
+      </section>
+      {/***** End Logos Section *****/}
+
+      {/***** Contact Section *****/}
+      <section className='contact'>
+        <div className='container'>
+          <h2>
+            ¿Tienes un <span className='green-text'>proyecto en mente</span>?
+          </h2>
+          <div className='contact-content'>
+            <div className='contact-left'>
+              <h2>
+                Agenda una <span className='green-text'>reunión gratis</span>{' '}
+                con un experto de Synaptech
+              </h2>
+              {/* Card Expert */}
+              <div className='expert-card'>
+                <div className='expert-info'>
+                  <div>
+                    <p className='expert-name'>Juan Pérez</p>
+                    <p className='expert-position'>Desarrollador Full Stack</p>
+                  </div>
+                  <img
+                    src='/img/clients/client_6.jpeg'
+                    alt='expert'
+                    className='expert-img'
+                  />
+                </div>
+
+                <p className='expert-text'>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Accusantium similique architecto tempora itaque nam,
+                  doloremque ullam!
+                </p>
+              </div>
+            </div>
+            <div className='contact-right'>
+              <form className='contact-form'>
+                <input
+                  type='text'
+                  placeholder='Nombre'
+                  className='input'
+                />
+                <input
+                  type='email'
+                  placeholder='Correo'
+                  className='input'
+                />
+                <input
+                  type='text'
+                  placeholder='Teléfono'
+                  className='input'
+                />
+                <textarea
+                  placeholder='Mensaje'
+                  className='input'
+                ></textarea>
+                <input
+                  type='submit'
+                  value='Enviar'
+                  className='btn'
+                />
+              </form>
+              <div className='form-message'>
+                <p>Por favor, completa todos los campos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/***** End Contact Section *****/}
+
+      {/***** Footer *****/}
       <footer>
         <div className='container'>
           <div className='footer-info'>
@@ -361,7 +486,9 @@ export const Home = () => {
           </div>
         </div>
       </footer>
-      {/* Pointer following mouse */}
+      {/***** End Footer *****/}
+
+      {/***** Pointer following mouse *****/}
       <span
         id='pointer'
         className='cursorMouse pointer'
@@ -370,7 +497,7 @@ export const Home = () => {
         id='pointer-outer'
         className='cursorMouse pointer-outer'
       ></span>
-      {/* End circle following mouse */}
+      {/***** End Pointer following mouse *****/}
     </>
   );
 };

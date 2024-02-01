@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import { FaRegTimesCircle } from 'react-icons/fa';
+import { FaCode, FaLaptopCode, FaRegTimesCircle } from 'react-icons/fa';
+import { FaCloud, FaArrowUpRightDots } from 'react-icons/fa6';
+
 import { HiBars3 } from 'react-icons/hi2';
 import { useEffect, useState } from 'react';
 
@@ -39,7 +41,7 @@ export const Home = () => {
 
   // Parallax effect on scroll
   const handleParallax = () => {
-    const parallax = document.querySelectorAll('.parallax-card');
+    const parallax = document.querySelectorAll('.card-group');
 
     parallax.forEach((item) => {
       item.style.transform = `translateY(-${
@@ -94,6 +96,14 @@ export const Home = () => {
                 Diseño Web
               </NavLink>
             </li>
+            <li>
+              <NavLink
+                to='/contact'
+                className={activeLink}
+              >
+                Contacto
+              </NavLink>
+            </li>
           </ul>
           <button
             onClick={handleMenuOpen}
@@ -145,20 +155,20 @@ export const Home = () => {
           </p>
         </div>
       </section>
-      {/* Sección qué hacemos */}
-      <section className='container'>
-        <div className='flex justify-between align-center mt-5'>
-          <div>
+      {/* Sección destacar software */}
+      <section className='section-software'>
+        <div className='section-software-content container'>
+          <div className='section-software-info'>
             <h2>Toma el control de tus procesos de negocio</h2>
             <p>
               Aporta el máximo valor a tu negocio y define tu marca a través del
               desarrollo personalizado de aplicaciones a la medida.
             </p>
           </div>
-          <div className='parallax-container'>
+          <div className='section-software-parallax'>
             {/* Left cards */}
             <div
-              className='parallax-card'
+              className='card-group'
               data-speed='0.08'
             >
               <div className='card'>
@@ -180,7 +190,7 @@ export const Home = () => {
             {/* End left cards */}
             {/* Right Cards */}
             <div
-              className='parallax-card'
+              className='card-group'
               data-speed='0.12'
             >
               <div className='card'>
@@ -203,7 +213,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      {/* Sección Clientes Felices */}
+      {/* Sección qué hacemos por ti */}
       <section className='services'>
         <div className='container'>
           <h2>¿Cómo te apoyamos?</h2>
@@ -214,7 +224,7 @@ export const Home = () => {
           <div className='services-cards'>
             {/* Card 1 */}
             <div className='card-green'>
-              <span>Card Icon</span>
+              <FaCode size={50} />
               <h4>Aplicaciones Web & Mobile</h4>
               <p>
                 Proporciona el máximo valor a tu negocio con un software
@@ -223,7 +233,7 @@ export const Home = () => {
             </div>
             {/* Card 2 */}
             <div className='card-green'>
-              <span>Card Icon</span>
+              <FaLaptopCode size={50} />
               <h4>Desarrollo Web</h4>
               <p>
                 Diseños atractivos y que generan ventas. Langing pages,
@@ -232,7 +242,7 @@ export const Home = () => {
             </div>
             {/* Card 2 */}
             <div className='card-green'>
-              <span>Card Icon</span>
+              <FaCloud size={50} />
               <h4>Desarrollo basado en la nube</h4>
               <p>
                 Acelera el desarrollo, mejora la calidad del producto final y
@@ -241,7 +251,7 @@ export const Home = () => {
             </div>
             {/* Card 3 */}
             <div className='card-green'>
-              <span>Card Icon</span>
+              <FaArrowUpRightDots size={50} />
               <h4>Data Analytics</h4>
               <p>
                 Transforma los procesos de toma de decisiones y define
@@ -251,16 +261,92 @@ export const Home = () => {
           </div>
         </div>
       </section>
-      {/* Sección Quienes Somos */}
-      <section>
+      {/***** Sección Testimonials *****/}
+      <section className='testimonials'>
         <div className='container'>
-          <h2>Quienes Somos</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
-            perferendis natus aliquam sunt velit distinctio maxime eveniet
-            voluptates dolores eaque tempora corporis voluptas vitae
-            accusantium, in laudantium accusamus, temporibus laboriosam.
-          </p>
+          <h2>
+            Clientes Felices con <span className='green-text'>Synaptech</span>
+          </h2>
+          <div className='testimonials-content'>
+            {/* Testimonial Card 1 */}
+            <div className='testimonials-card'>
+              <img
+                src='/img/clients/client_logo_1.svg'
+                alt='client logo'
+                className='client-logo'
+              />
+              <p className='client-comment'>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+                quibusdam repudiandae tempora quae beatae consectetur non
+                facilis, commodi quod, cupiditate ea amet? Officia illum
+                dolorem, minus est doloribus voluptate corrupti?
+              </p>
+              <div className='author'>
+                <img
+                  src='/img/clients/client_1.jpeg'
+                  alt='author'
+                  className='author-img'
+                />
+                <div>
+                  <p className='author-name'>Valentina Cárdenas</p>
+                  <p className='author-position'>Emprendedora</p>
+                </div>
+              </div>
+            </div>
+            {/* End Testimonials Card 1 */}
+            {/* Testimonials Card 2 */}
+            <div className='testimonials-card'>
+              <img
+                src='/img/clients/client_logo_2.svg'
+                alt='client logo'
+                className='client-logo'
+              />
+              <p className='client-comment'>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+                quibusdam repudiandae tempora quae beatae consectetur non
+                facilis, commodi quod, cupiditate ea amet? Officia illum
+                dolorem, minus est doloribus voluptate corrupti?
+              </p>
+              <div className='author'>
+                <img
+                  src='/img/clients/client_2.jpeg'
+                  alt='author'
+                  className='author-img'
+                />
+                <div>
+                  <p className='author-name'>Pedro Orellana</p>
+                  <p className='author-position'>Emprendedor</p>
+                </div>
+              </div>
+            </div>
+            {/* End Testimonials Card 2 */}
+            {/* Testimonials Card 3 */}
+            <div className='testimonials-card'>
+              <img
+                src='/img/clients/client_logo_3.svg'
+                alt='client logo'
+                className='client-logo'
+              />
+              <p className='client-comment'>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est
+                quibusdam repudiandae tempora quae beatae consectetur non
+                facilis, commodi quod, cupiditate ea amet? Officia illum
+                dolorem, minus est doloribus voluptate corrupti?
+              </p>
+              <div className='author'>
+                <img
+                  src='/img/clients/client_4.jpeg'
+                  alt='author'
+                  className='author-img'
+                />
+                <div>
+                  <p className='author-name'>Jorge Fuenzalida</p>
+                  <p className='author-position'>Corredor de Propiedades</p>
+                </div>
+              </div>
+            </div>
+            {/* End Testimonials Card 3 */}
+          </div>
         </div>
       </section>
       <footer>

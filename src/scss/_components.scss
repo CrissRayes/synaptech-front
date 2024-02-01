@@ -137,10 +137,6 @@ nav {
     text-transform: uppercase;
     transition: map-get($transition, 'fast');
     cursor: pointer;
-    // display: none;
-    // @media (max-width: map-get($breakpoints, 'md')) {
-    //   display: block;
-    // }
 
     &:hover {
       color: $color-green;
@@ -201,7 +197,6 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 2rem;
   color: $color-grey-dark;
   height: 100vh;
   background-image: url('/img/hero1.jpg');
@@ -271,30 +266,42 @@ nav {
   }
 }
 
-// ***** Parallax Cards ***** //
-.parallax-container {
-  display: flex;
-  gap: 2rem;
+// ***** Sección Software ***** //
+.section-software {
+  &-content {
+    padding: 10rem 0;
+    display: flex;
+    gap: 2rem;
+  }
 
-  & .card {
-    width: 300px;
-    height: 300px;
-    padding: 2rem;
-    background-color: $color-white;
-    border-radius: $border-radius;
-    box-shadow: map-get($shadow, 'default');
-    margin-bottom: 2rem;
-    transition: map-get($transition, 'fast');
+  &-info {
+    flex: 1;
+  }
+  &-parallax {
+    flex: 2;
+    display: flex;
+    gap: 1rem;
 
-    &:hover {
-      box-shadow: map-get($shadow, 'hover');
-      transform: translate(0, -1rem);
+    & .card {
+      height: 300px;
+      padding: 2rem;
+      background-color: $color-white;
+      border-radius: $border-radius;
+      box-shadow: map-get($shadow, 'default');
+      margin-bottom: 2rem;
+      transition: map-get($transition, 'fast');
+
+      &:hover {
+        box-shadow: map-get($shadow, 'hover');
+        transform: translate(0, -1rem);
+      }
     }
   }
 }
 
-// ***** Services Cards ***** //
+// ***** Cómo te apoyamos ***** //
 .services {
+  padding: 10rem 0;
   background-color: $color-grey-dark;
   color: white;
 }
@@ -371,6 +378,57 @@ nav {
 
     &:hover {
       background-color: $color-green-dark;
+    }
+  }
+}
+
+// ***** Sección de testimonials ***** //
+.testimonials {
+  padding: 10rem 0;
+  &-content {
+    display: flex;
+    gap: 2rem;
+  }
+  &-card {
+    width: calc(100% / 3 - 1rem);
+    padding: 3rem;
+    background-color: $color-white;
+    margin-bottom: 2rem;
+
+    & .client-logo {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 1rem;
+    }
+
+    & .client-comment {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-light;
+      margin-bottom: 2rem;
+      text-align: justify;
+    }
+
+    & .author {
+      display: flex;
+      margin-top: 1rem;
+      &-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      &-name {
+        margin-left: 1rem;
+        margin-bottom: 0;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+      }
+      &-position {
+        margin-left: 1rem;
+        margin-bottom: 0;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-light;
+        color: $color-grey;
+      }
     }
   }
 }

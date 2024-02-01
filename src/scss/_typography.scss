@@ -67,3 +67,7 @@ p {
   font-size: clamp(4rem, 6vw, 10rem);
   line-height: 1.2;
 }
+
+.green-text {
+  color: $color-green;
+}

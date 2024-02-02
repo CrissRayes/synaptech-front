@@ -61,6 +61,7 @@ export const Home = () => {
 
   // Parallax effect on scroll
   const handleParallax = () => {
+    if (window.innerWidth <= 1024) return;
     const parallax = document.querySelectorAll('.card-group');
     parallax.forEach((item) => {
       const initialPosition = parseInt(item.dataset.position, 10);
@@ -184,82 +185,84 @@ export const Home = () => {
 
       {/***** Software Section *****/}
       <section className='section-software'>
-        <div className='section-software-content container'>
-          <div className='section-software-info'>
-            <h2>
-              Desarrollamos software que te brinda una{' '}
-              <span className='green-text'>ventaja competitiva</span> utilizando
-              las últimas tecnologías.
-            </h2>
-            <p>
-              El software personalizado tiene el poder de transformar tu
-              negocio. Desde la automatización de procesos internos y el soporte
-              para operaciones comerciales clave, hasta plataformas de
-              vanguardia orientadas al cliente, las soluciones digitales
-              específicas para la empresa pueden ser el factor clave para
-              impulsar tu negocio.
-            </p>
-            <button className='btn'>Hablemos</button>
-          </div>
-          <div className='section-software-parallax'>
-            {/* Left cards */}
-            <div
-              className='card-group'
-              data-speed='0.08'
-              data-position='400'
-            >
-              <div className='card'>
-                <div className='card-icon'>
-                  <BsStars size={20} />
-                </div>
-                <h4>Software a medida</h4>
-                <p>
-                  Disfruta de soluciones de software personalizadas diseñadas
-                  teniendo en cuenta tus necesidades únicas y planes futuros.
-                </p>
-              </div>
-              <div className='card'>
-                <div className='card-icon'>
-                  <RiDashboard3Line size={20} />
-                </div>
-                <h4>Uso Eficiente de Recursos</h4>
-                <p>
-                  No dejes que nada se desperdicie, ya que tu solución de
-                  software personalizada te ayuda a gestionar los activos de tu
-                  empresa.
-                </p>
-              </div>
+        <div className='container'>
+          <div className='section-software-content'>
+            <div className='section-software__info'>
+              <h2>
+                Desarrollamos software que te brinda una{' '}
+                <span className='green-text'>ventaja competitiva</span>{' '}
+                utilizando las últimas tecnologías.
+              </h2>
+              <p>
+                El software personalizado tiene el poder de transformar tu
+                negocio. Desde la automatización de procesos internos y el
+                soporte para operaciones comerciales clave, hasta plataformas de
+                vanguardia orientadas al cliente, las soluciones digitales
+                específicas para la empresa pueden ser el factor clave para
+                impulsar tu negocio.
+              </p>
+              <button className='btn'>Hablemos</button>
             </div>
-            {/* End left cards */}
-            {/* Right Cards */}
-            <div
-              className='card-group'
-              data-speed='0.2'
-              data-position='400'
-            >
-              <div className='card'>
-                <div className='card-icon'>
-                  <RiFlowChart size={20} />
+            <div className='section-software-parallax'>
+              {/* Left cards */}
+              <div
+                className='card-group'
+                data-speed='0.08'
+                data-position='400'
+              >
+                <div className='card'>
+                  <div className='card-icon'>
+                    <BsStars size={20} />
+                  </div>
+                  <h4>Software a medida</h4>
+                  <p>
+                    Disfruta de soluciones de software personalizadas diseñadas
+                    teniendo en cuenta tus necesidades únicas y planes futuros.
+                  </p>
                 </div>
-                <h4>Procesos Optimizados</h4>
-                <p>
-                  Aumenta la productividad de los empleados proporcionando
-                  herramientas de gestión efectivas para las operaciones de tu
-                  negocio.
-                </p>
-              </div>
-              <div className='card'>
-                <div className='card-icon'>
-                  <TbSettingsAutomation size={20} />
+                <div className='card'>
+                  <div className='card-icon'>
+                    <RiDashboard3Line size={20} />
+                  </div>
+                  <h4>Uso Eficiente de Recursos</h4>
+                  <p>
+                    No dejes que nada se desperdicie, ya que tu solución de
+                    software personalizada te ayuda a gestionar los activos de
+                    tu empresa.
+                  </p>
                 </div>
-                <h4>Automatización de Procesos</h4>
-                <p>
-                  Automatiza tareas repetitivas y dirige la atención de tu
-                  equipo hacia lo realmente crucial para tu negocio.
-                </p>
               </div>
+              {/* End left cards */}
+              {/* Right Cards */}
+              <div
+                className='card-group'
+                data-speed='0.2'
+                data-position='400'
+              >
+                <div className='card'>
+                  <div className='card-icon'>
+                    <RiFlowChart size={20} />
+                  </div>
+                  <h4>Procesos Optimizados</h4>
+                  <p>
+                    Aumenta la productividad de los empleados proporcionando
+                    herramientas de gestión efectivas para las operaciones de tu
+                    negocio.
+                  </p>
+                </div>
+                <div className='card'>
+                  <div className='card-icon'>
+                    <TbSettingsAutomation size={20} />
+                  </div>
+                  <h4>Automatización de Procesos</h4>
+                  <p>
+                    Automatiza tareas repetitivas y dirige la atención de tu
+                    equipo hacia lo realmente crucial para tu negocio.
+                  </p>
+                </div>
+              </div>
+              {/* End right cards */}
             </div>
-            {/* End right cards */}
           </div>
         </div>
       </section>
@@ -410,15 +413,42 @@ export const Home = () => {
             <span className='green-text'>mejores tecnologías</span>
           </h2>
           <div className='logos-content'>
-            <FaReact size={40} />
-            <FaNodeJs size={40} />
-            <FaAws size={40} />
-            <FaDocker size={40} />
-            <FaFigma size={40} />
-            <FaSquareGithub size={40} />
-            <FaPython size={40} />
-            <FaSquareJs size={40} />
-            <BiLogoPostgresql size={40} />
+            <FaReact
+              size={40}
+              className='logos-content__icon'
+            />
+            <FaNodeJs
+              size={40}
+              className='logos-content__icon'
+            />
+            <FaAws
+              size={40}
+              className='logos-content__icon'
+            />
+            <FaDocker
+              size={40}
+              className='logos-content__icon'
+            />
+            <FaFigma
+              size={40}
+              className='logos-content__icon'
+            />
+            <FaSquareGithub
+              size={40}
+              className='logos-content__icon'
+            />
+            <FaPython
+              size={40}
+              className='logos-content__icon'
+            />
+            <FaSquareJs
+              size={40}
+              className='logos-content__icon'
+            />
+            <BiLogoPostgresql
+              size={40}
+              className='logos-content__icon'
+            />
           </div>
         </div>
       </section>
@@ -427,9 +457,6 @@ export const Home = () => {
       {/***** Contact Section *****/}
       <section className='contact'>
         <div className='container'>
-          <h2>
-            ¿Tienes un <span className='green-text'>proyecto en mente</span>?
-          </h2>
           <div className='contact-content'>
             <div className='contact-left'>
               <h2>

@@ -1,7 +1,28 @@
 import { NavLink } from 'react-router-dom';
 import { FaCode, FaLaptopCode, FaRegTimesCircle } from 'react-icons/fa';
-import { FaCloud, FaArrowUpRightDots } from 'react-icons/fa6';
+import {
+  FaCloud,
+  FaArrowUpRightDots,
+  FaWhatsapp,
+  FaLocationDot,
+  FaInstagram,
+  FaLinkedin,
+  FaBehance,
+  FaDribbble,
+  FaReact,
+  FaNodeJs,
+  FaAws,
+  FaDocker,
+  FaFigma,
+  FaSquareGithub,
+  FaPython,
+  FaSquareJs,
+} from 'react-icons/fa6';
 import { HiBars3 } from 'react-icons/hi2';
+import { BiLogoPostgresql } from 'react-icons/bi';
+import { BsStars } from 'react-icons/bs';
+import { RiFlowChart, RiDashboard3Line } from 'react-icons/ri';
+import { TbSettingsAutomation } from 'react-icons/tb';
 import { useEffect, useState } from 'react';
 
 export const Home = () => {
@@ -101,7 +122,7 @@ export const Home = () => {
                 to='/contact'
                 className={activeLink}
               >
-                Contacto
+                Hablemos
               </NavLink>
             </li>
           </ul>
@@ -150,10 +171,13 @@ export const Home = () => {
             desarrollo de software & diseño web{' '}
             <span className='green-text'>a la medida</span>
           </h1>
-          <p className='hero-text'>
-            Haz crecer tu negocio y ahorra tiempo con un software y/o una web
-            personalizada que brinde resultados excepcionales.
-          </p>
+          <div>
+            <p className='hero-text'>
+              Haz crecer tu negocio y ahorra tiempo con un software y/o una web
+              personalizada que brinde resultados excepcionales.
+            </p>
+            <button className='btn'>hablemos</button>
+          </div>
         </div>
       </section>
       {/***** End Hero Section *****/}
@@ -175,26 +199,30 @@ export const Home = () => {
               específicas para la empresa pueden ser el factor clave para
               impulsar tu negocio.
             </p>
-            <button className='btn'>Contactar</button>
+            <button className='btn'>Hablemos</button>
           </div>
           <div className='section-software-parallax'>
             {/* Left cards */}
             <div
               className='card-group'
               data-speed='0.08'
-              data-position='0'
+              data-position='400'
             >
               <div className='card'>
-                <span>Icono</span>
-                <h2>Software a medida</h2>
+                <div className='card-icon'>
+                  <BsStars size={20} />
+                </div>
+                <h4>Software a medida</h4>
                 <p>
                   Disfruta de soluciones de software personalizadas diseñadas
                   teniendo en cuenta tus necesidades únicas y planes futuros.
                 </p>
               </div>
               <div className='card'>
-                <span>Icono</span>
-                <h2>Uso Eficiente de Recursos</h2>
+                <div className='card-icon'>
+                  <RiDashboard3Line size={20} />
+                </div>
+                <h4>Uso Eficiente de Recursos</h4>
                 <p>
                   No dejes que nada se desperdicie, ya que tu solución de
                   software personalizada te ayuda a gestionar los activos de tu
@@ -210,8 +238,10 @@ export const Home = () => {
               data-position='400'
             >
               <div className='card'>
-                <span>Icono</span>
-                <h2>Procesos Optimizados</h2>
+                <div className='card-icon'>
+                  <RiFlowChart size={20} />
+                </div>
+                <h4>Procesos Optimizados</h4>
                 <p>
                   Aumenta la productividad de los empleados proporcionando
                   herramientas de gestión efectivas para las operaciones de tu
@@ -219,8 +249,10 @@ export const Home = () => {
                 </p>
               </div>
               <div className='card'>
-                <span>Icono</span>
-                <h2>Automatización de Procesos</h2>
+                <div className='card-icon'>
+                  <TbSettingsAutomation size={20} />
+                </div>
+                <h4>Automatización de Procesos</h4>
                 <p>
                   Automatiza tareas repetitivas y dirige la atención de tu
                   equipo hacia lo realmente crucial para tu negocio.
@@ -375,39 +407,18 @@ export const Home = () => {
         <div className='container'>
           <h2>
             Trabajamos con las{' '}
-            <span className='green-text'>mejores marcas</span>
+            <span className='green-text'>mejores tecnologías</span>
           </h2>
           <div className='logos-content'>
-            <img
-              src='/img/logos/logo1.png'
-              alt='logo'
-              className='logo'
-            />
-            <img
-              src='/img/logos/logo2.png'
-              alt='logo'
-              className='logo'
-            />
-            <img
-              src='/img/logos/logo3.png'
-              alt='logo'
-              className='logo'
-            />
-            <img
-              src='/img/logos/logo4.png'
-              alt='logo'
-              className='logo'
-            />
-            <img
-              src='/img/logos/logo5.png'
-              alt='logo'
-              className='logo'
-            />
-            <img
-              src='/img/logos/logo6.png'
-              alt='logo'
-              className='logo'
-            />
+            <FaReact size={40} />
+            <FaNodeJs size={40} />
+            <FaAws size={40} />
+            <FaDocker size={40} />
+            <FaFigma size={40} />
+            <FaSquareGithub size={40} />
+            <FaPython size={40} />
+            <FaSquareJs size={40} />
+            <BiLogoPostgresql size={40} />
           </div>
         </div>
       </section>
@@ -491,19 +502,45 @@ export const Home = () => {
                 alt='logo'
                 className='logo'
               />
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, voluptatum.
-              </p>
+              <p>Transforma tu negocio con un software personalizado.</p>
             </div>
-            <div className='footer-center'>Centro</div>
-            <div className='footer-right'>Derecha</div>
+            <div className='footer-center'>
+              <ul>
+                <li>
+                  <FaWhatsapp
+                    size={20}
+                    className='icon'
+                  />
+                  +56 9 1234 5678
+                </li>
+                <li>
+                  <FaWhatsapp
+                    size={20}
+                    className='icon'
+                  />
+                  +56 9 1234 5678
+                </li>
+                <li>
+                  <FaLocationDot
+                    size={20}
+                    className='icon'
+                  />
+                  Alcázar #356, Rancagua, CL.
+                </li>
+              </ul>
+            </div>
+            <div className='footer-right'>
+              <FaInstagram size={20} />
+              <FaLinkedin size={20} />
+              <FaBehance size={20} />
+              <FaDribbble size={20} />
+            </div>
           </div>
           {/*  */}
           <div className='footer-copyright'>
             <p>
-              &copy; Copyright 2023 | Gestión Informática{' '}
-              <span className='green-text'>Synaptech</span>
+              &copy; Copyright 2023 | Gestión en Informática{' '}
+              <span className='green-text'>Synaptech SpA</span>
             </p>
           </div>
         </div>
